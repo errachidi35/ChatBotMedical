@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabibi: Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        .navbar {
+            width: 94%;
+            background: #37477a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            box-shadow: 0 4px 8px rgba(22, 5, 5, 0.1);
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #9eadc2;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #dae0e5;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .signup-container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .signup-left img.logo {
+            height: 100px;
+        }
+
+        .signup-left h1 {
+            color: #00d4ff;
+            margin-top: 20px;
+        }
+
+        .signup-right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form label {
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+        .logo2{
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <img src="images/healthmate.png" alt="Tabibi Logo" class="logo">
+    <ul class="nav-links">
+        <li><a href="/index">Accueil</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacter</a></li>
+        <li><a href="/signup" class="active">Register</a></li>
+        <li><a href="/login">Log In</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div class="signup-container">
+        <div class="signup-left">
+            <img src="images/healthmate.png" alt="Tabibi Logo" class="logo2">
+            <h1>HealthMate</h1>
+        </div>
+        <div class="signup-right">
+            <form class="signup-form" action="register" method="POST" enctype="multipart/form-data">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" required>
+
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="bloodtype">Blood Type</label>
+                <input type="text" id="bloodtype" name="bloodtype" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="login-button">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

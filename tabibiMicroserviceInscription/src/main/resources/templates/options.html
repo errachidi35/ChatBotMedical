@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMate: Votre Assistant Médical Intelligent</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Body styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 93%;
+            background: #37477a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            box-shadow: 0 4px 8px rgba(22, 5, 5, 0.1);
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #9eadc2;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #dae0e5;
+        }
+
+        /* Content container */
+        .content {
+            margin-top: 200px;
+            width: 100%;
+            max-width: 1200px; /* Limit content width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #37477a;
+            border: none;
+            color: white;
+            padding: 20px 60px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #00b3cc;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <img src="images/healthmate.png" alt="Logo" class="logo">
+    <ul class="nav-links">
+        <li><a href="/index">Accueil</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacter</a></li>
+        <li><a href="/signup">Register</a></li>
+        <li><a href="/login">Log In</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div class="button-container">
+        <button class="btn" id="gemini-button">Gemini</button>
+        <button class="btn" id="personalized-button">Personalized</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('gemini-button').addEventListener('click', function() {
+        window.location.href = '/home'; // Redirect to the home page for Gemini
+    });
+
+    document.getElementById('personalized-button').addEventListener('click', function() {
+        window.location.href = '/personalized_home'; // Redirect to the home page for Personalized
+    });
+</script>
+</body>
+</html>

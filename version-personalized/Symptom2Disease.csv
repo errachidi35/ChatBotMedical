@@ -1,0 +1,72 @@
+Symptom,Disease
+fever,Common Cold
+cough,Common Cold
+sore throat,Common Cold
+runny nose,Common Cold
+sneezing,Common Cold
+fatigue,Common Cold
+fever,Influenza
+chills,Influenza
+body aches,Influenza
+cough,Influenza
+sore throat,Influenza
+headache,Influenza
+fatigue,Influenza
+fever,COVID-19
+dry cough,COVID-19
+tiredness,COVID-19
+loss of taste or smell,COVID-19
+sore throat,COVID-19
+shortness of breath,COVID-19
+chest pain,COVID-19
+headache,Migraine
+nausea,Migraine
+vomiting,Migraine
+sensitivity to light,Migraine
+sensitivity to sound,Migraine
+blurred vision,Migraine
+abdominal pain,Stomach Flu
+nausea,Stomach Flu
+vomiting,Stomach Flu
+diarrhea,Stomach Flu
+fever,Stomach Flu
+muscle pain,Stomach Flu
+fever,Malaria
+chills,Malaria
+sweating,Malaria
+headache,Malaria
+nausea,Malaria
+vomiting,Malaria
+muscle pain,Malaria
+fever,Dengue
+severe headache,Dengue
+pain behind the eyes,Dengue
+severe joint pain,Dengue
+severe muscle pain,Dengue
+fatigue,Dengue
+nausea,Dengue
+vomiting,Dengue
+rash,Dengue
+fever,Typhoid
+weakness,Typhoid
+stomach pain,Typhoid
+headache,Typhoid
+diarrhea,Typhoid
+constipation,Typhoid
+dry cough,Typhoid
+fever,Pneumonia
+chills,Pneumonia
+cough,Pneumonia
+shortness of breath,Pneumonia
+chest pain,Pneumonia
+fatigue,Pneumonia
+nausea,Pneumonia
+vomiting,Pneumonia
+diarrhea,Pneumonia
+fever,Sinusitis
+nasal congestion,Sinusitis
+thick nasal discharge,Sinusitis
+facial pain,Sinusitis
+headache,Sinusitis
+sore throat,Sinusitis
+cough,Sinusitis

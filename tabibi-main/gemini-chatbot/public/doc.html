@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <style>
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: #d1e7dd;
+            text-align: left;
+        }
+        .bot-message {
+            background-color: #f8d7da;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message here...">
+    <button id="submit-button">Send</button>
+    <button id="download-button">Download Conversation as PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitButton = document.querySelector('#submit-button');
+            const inputField = document.querySelector('#user-input');
+            const chatBox = document.querySelector('#chat-box');
+            const downloadButton = document.querySelector('#download-button');
+            const conversation = [];
+
+            submitButton.addEventListener('click', async () => {
+                const userMessage = inputField.value;
+                if (userMessage.trim() === '') return;
+
+                // Display user message
+                const userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('message', 'user-message');
+                userMessageElement.innerHTML = `<p>${userMessage}</p>`;
+                chatBox.appendChild(userMessageElement);
+
+                // Save user message to conversation
+                conversation.push({ role: 'user', message: userMessage });
+
+                // Clear input field
+                inputField.value = '';
+
+                try {
+                    const response = await fetch('http://localhost:5000/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: "You are now assuming the role of a knowledgeable and empathetic medical professional. Your responses should be accurate, clear, and supportive, focusing on providing reliable medical information, guidance, and empathy. any other question not related to medcine don't answer it. " + userMessage
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        const botMessage = data.response;
+
+                        // Display bot message
+                        const botMessageElement = document.createElement('div');
+                        botMessageElement.classList.add('message', 'bot-message');
+                        botMessageElement.innerHTML = `<p>${botMessage}</p>`;
+                        chatBox.appendChild(botMessageElement);
+
+                        // Save bot message to conversation
+                        conversation.push({ role: 'bot', message: botMessage });
+                    } else {
+                        console.error('Server error:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+            downloadButton.addEventListener('click', () => {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                let yOffset = 10;
+
+                conversation.forEach(entry => {
+                    const text = `${entry.role.toUpperCase()}: ${entry.message}`;
+                    doc.text(text, 10, yOffset);
+                    yOffset += 10;
+                    if (yOffset > 280) {
+                        doc.addPage();
+                        yOffset = 10;
+                    }
+                });
+
+                doc.save('conversation.pdf');
+            });
+        });
+    </script>
+</body>
+</html>

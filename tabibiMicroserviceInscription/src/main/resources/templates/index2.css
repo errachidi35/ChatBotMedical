@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #afffe6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links li a.active {
+    color: #00ff00;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.text-container {
+    width: 60%;
+    text-align: left;
+}
+
+.text-container h1 {
+    color: #00d4ff;
+}
+
+.image-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.robot-image {
+    width: 150px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px;
+    margin-right: 10px;
+}
+.text-content h1 {
+    color: #00d4ff;
+    font-size: 36px; /* Augmenter la taille du titre */
+}
+
+.text-content p {
+    margin: 20px 0;
+    font-size: 18px; /* Augmenter la taille du texte du paragraphe */
+}
+
+.robot-image {
+    width: 350px; /* Augmenter la taille de l'image du robot */
+}

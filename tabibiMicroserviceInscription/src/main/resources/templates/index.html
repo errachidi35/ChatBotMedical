@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabibi: Votre Assistant Médical Intelligent</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 50px;
+            background: #37477a;
+            box-shadow: 0 4px 8px rgba(22, 5, 5, 0.1);
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #9eadc2;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #dae0e5;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .content {
+            width: 80%;
+            max-width: 800px;
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #00d4ff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <img src="images/healthmate.png" alt="Tabibi Logo" class="logo">
+    <ul class="nav-links">
+        <li><a href="/index">Accueil</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacter</a></li>
+        <li><a href="/signup">Register</a></li>
+        <li><a href="/login">Log In</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="content">
+        <h1>HealthMate : Votre Assistant Médical Intelligent</h1>
+        <p>HealthMate est votre compagnon de santé numérique, conçu pour vous offrir une assistance rapide et fiable en matière de symptômes et de maladies. Avec une interface conviviale et intuitive, ce chatbot innovant vous permet de discuter de vos symptômes en toute confidentialité et de recevoir des recommandations personnalisées pour vous aider à mieux comprendre et gérer votre état de santé.</p>
+    </div>
+</div>
+</body>
+</html>

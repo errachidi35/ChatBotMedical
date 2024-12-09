@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabibi: Votre Assistant Médical Intelligent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/healthmate.png" alt="Tabibi Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <button class="new-discussion" onclick="startNewDiscussion()">New Discussion</button>
+            <div class="discussion-list">
+                <!-- List of discussions will go here -->
+            </div>
+        </aside>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <!-- Chat messages will be dynamically inserted here -->
+            </div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Enter your message here...">
+                <button type="button" class="submit-button" id="submit-button" onclick="sendMessage()">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
